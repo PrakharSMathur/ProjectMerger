@@ -1,11 +1,15 @@
 package com.example.EmployeeMgmt.repository;
 
-import com.example.EmployeeMgmt.model.Employee;
+import java.util.ArrayList;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface EmployeeRepository extends MongoRepository<Employee,String> {
+import com.example.EmployeeMgmt.model.Employee;
 
+public interface EmployeeRepository extends MongoRepository<Employee, String> {
+
+
+	Employee findByEmpId(String empId);
+
+	
 }

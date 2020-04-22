@@ -1,16 +1,14 @@
 package com.example.EmployeeMgmt.repository;
 
-import com.example.EmployeeMgmt.model.EmployeeNotice;
 import java.util.ArrayList;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface EmployeeNoticeRepository extends MongoRepository<EmployeeNotice,String> {
+import com.example.EmployeeMgmt.model.EmployeeNotice;
 
-  //ArrayList<EmployeeNotice> getEmpMsgByEmpId(String empId);
+public interface EmployeeNoticeRepository extends MongoRepository<EmployeeNotice, String> {
 
-  void deleteAllById(String empId);
+	ArrayList<EmployeeNotice> getEmpMsgById(String empId);
 
-  ArrayList<EmployeeNotice> getEmpMsgById(String empId);
+
 }

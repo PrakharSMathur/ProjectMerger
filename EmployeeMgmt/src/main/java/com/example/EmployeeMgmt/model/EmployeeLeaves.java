@@ -1,15 +1,27 @@
 package com.example.EmployeeMgmt.model;
 
-import java.util.Date;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+//import javax.persistence.Transient;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "EmployeeLeave")
 public class EmployeeLeaves {
+	
+	//@Transient
+    public static final String SEQUENCE_NAME = "emp_leave_sequence";
+
 	@Id
 	int id;
 	String empId;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	String name; 
 	int leaves_left;
 	int leaves_applied;

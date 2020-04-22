@@ -1,27 +1,34 @@
- package com.example.EmployeeMgmt.model;
+package com.example.EmployeeMgmt.model;
+
+//import javax.persistence.Id;
+//import javax.persistence.Transient;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "EmployeeNotice")
 public class EmployeeNotice {
+
+	//@Transient
+    public static final String SEQUENCE_NAME = "emp_notice_sequence";
+
+	@Override
+	public String toString() {
+		return "EmpNoticeTemp [id=" + id + ", from=" + from + ", to=" + to + ", message=" + message + "]";
+	}
 	@Id
-	int id;
-	String empId;
+	String id;
 	String from;
+	String to;
 	String message;
-	public EmployeeNotice(String empId,String from, String message) {
+	public EmployeeNotice(String from, String to) {
 		super();
-		this.empId = empId;
 		this.from = from;
-		this.message = message;
+		this.to=to;
 	}
-	
-	public String getEmpId() {
-		return empId;
+	public String getId() {
+		return id;
 	}
-	public void setEmpId(String empId) {
-		this.empId = empId;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getFrom() {
 		return from;
@@ -35,6 +42,5 @@ public class EmployeeNotice {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	
 	
 }

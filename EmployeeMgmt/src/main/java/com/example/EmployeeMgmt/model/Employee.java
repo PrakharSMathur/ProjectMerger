@@ -22,7 +22,27 @@ public class Employee {
 	String increment_status;
 	String security_clearance;
 	String location; 
-	
+	public Employee()
+	{
+		
+	}
+	public Employee(int user_type, String name, Date dOJ, String password, String phone, String email, String role,
+			Float salary, String increment_status, String security_clearance, String location) {
+		super();
+		this.user_type = user_type;
+		this.name = name;
+		DOJ = dOJ;
+		this.password = password;
+		this.phone = phone;
+		this.email = email;
+		this.role = role;
+		this.salary = salary;
+		this.increment_status = increment_status;
+		this.security_clearance = security_clearance;
+		this.location = location;
+	}
+
+
 	public Employee(String empId, int user_type, String name, Date dOJ, String password, String phone, String email,
 			String role, Float salary, String increment_status, String security_clearance, String location) {
 		super();

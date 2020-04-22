@@ -5,16 +5,16 @@ package com.example.EmployeeMgmt.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "emp_leave_sequence")
-public class Employee_Leave_Sequence {
+@Document(collection = "emp_leave_req_sequence")
+public class Employee_Leave_Request_Sequence {
 
 	
 	 @Id
 	    private String id;
 
-	    private int seq;
+	    private String seq;
 
-	    public Employee_Leave_Sequence() {}
+	    public Employee_Leave_Request_Sequence() {}
 
 	    public String getId() {
 	        return id;
@@ -24,11 +24,11 @@ public class Employee_Leave_Sequence {
 	        this.id = id;
 	    }
 
-	    public int getSeq() {
+	    public String getSeq() {
 	        return seq;
 	    }
 
-	    public void setSeq(int seq) {
+	    public void setSeq(String seq) {
 	        this.seq = seq;
 	    }
 }

@@ -1,13 +1,9 @@
 package com.example.EmployeeMgmt.repository;
 
-import com.example.EmployeeMgmt.model.HR;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import com.example.EmployeeMgmt.model.HR;
 
-@Repository
-public interface HRRepository extends MongoRepository<HR,String> {
+public interface HRRepository extends MongoRepository<HR,Integer>{
 
-    Optional<HR> findByName(String name);
 }
